@@ -13,8 +13,6 @@ public class TripDTO {
 
     private String description;
 
-    private List<String> photos;
-
     private LocalDate departureDate;
 
     private LocalDate arrivalDate;
@@ -51,14 +49,6 @@ public class TripDTO {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public List<String> getPhotos() {
-        return photos;
-    }
-
-    public void setPhotos(List<String> photos) {
-        this.photos = photos;
     }
 
     public LocalDate getDepartureDate() {

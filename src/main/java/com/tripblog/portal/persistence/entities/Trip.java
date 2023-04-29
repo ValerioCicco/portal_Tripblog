@@ -1,10 +1,8 @@
 package com.tripblog.portal.persistence.entities;
 
-import com.tripblog.portal.converters.PhotoConverter;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-import java.util.List;
 
 
 @Entity
@@ -23,10 +21,6 @@ public class Trip {
 
     @Column(name = "description", nullable = false)
     private String description;
-
-    @Column(name = "photos")
-    @Convert(converter = PhotoConverter.class)
-    private List<String> photos;
 
     @Column(name = "departure_date", nullable = false)
     private LocalDate departureDate;
@@ -68,14 +62,6 @@ public class Trip {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public List<String> getPhotos() {
-        return photos;
-    }
-
-    public void setPhotos(List<String> photos) {
-        this.photos = photos;
     }
 
     public LocalDate getDepartureDate() {
