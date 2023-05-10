@@ -22,8 +22,9 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "user_photo")
-    private String userPhoto;
+    @Column(name = "user_photo", columnDefinition = "MEDIUMBLOB")
+    @Lob
+    private byte[] userPhoto;
 
     @Column(name = "role", nullable = false)
     private String role;
@@ -68,11 +69,11 @@ public class User {
         this.password = password;
     }
 
-    public String getUserPhoto() {
+    public byte[] getUserPhoto() {
         return userPhoto;
     }
 
-    public void setUserPhoto(String userPhoto) {
+    public void setUserPhoto(byte[] userPhoto) {
         this.userPhoto = userPhoto;
     }
 

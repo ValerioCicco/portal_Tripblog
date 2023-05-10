@@ -1,6 +1,8 @@
 package com.tripblog.portal.persistence.entities;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 @Entity
 @Table(name = "photos")
@@ -10,11 +12,13 @@ public class Photo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "url")
-    private String url;
+    @Column(name = "photo", columnDefinition = "MEDIUMBLOB")
+    @Lob
+    private byte[] photo;
 
     @ManyToOne()
     @JoinColumn(name = "id_trip", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Trip trip;
 
     public long getId() {
@@ -25,12 +29,12 @@ public class Photo {
         this.id = id;
     }
 
-    public String getUrl() {
-        return url;
+    public byte[] getPhoto() {
+        return photo;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setPhoto(byte[] photo) {
+        this.photo = photo;
     }
 
     public Trip getTrip() {

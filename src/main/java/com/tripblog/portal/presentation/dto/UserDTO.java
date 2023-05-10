@@ -12,7 +12,7 @@ public class UserDTO {
 
     private String password;
 
-    private String userPhoto;
+    private byte[] userPhoto;
 
     private String role;
 
@@ -56,11 +56,11 @@ public class UserDTO {
         this.password = password;
     }
 
-    public String getUserPhoto() {
+    public byte[] getUserPhoto() {
         return userPhoto;
     }
 
-    public void setUserPhoto(String userPhoto) {
+    public void setUserPhoto(byte[] userPhoto) {
         this.userPhoto = userPhoto;
     }
 

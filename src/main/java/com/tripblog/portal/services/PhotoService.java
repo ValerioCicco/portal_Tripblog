@@ -71,4 +71,8 @@ public class PhotoService {
 
         return photoToDelete;
     }
+
+    public List<Photo> getPhotosFromTrip(long trip_id) {
+        return photoRepository.findByTrip_id(trip_id);
+    }
 }

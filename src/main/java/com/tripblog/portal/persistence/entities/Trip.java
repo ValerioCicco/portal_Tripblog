@@ -3,6 +3,8 @@ package com.tripblog.portal.persistence.entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
@@ -19,7 +21,7 @@ public class Trip {
     @Column(name = "continent", nullable = false)
     private String continent;
 
-    @Column(name = "description", nullable = false)
+    @Column(name = "description", nullable = false, length = 20000)
     private String description;
 
     @Column(name = "departure_date", nullable = false)
@@ -87,5 +89,4 @@ public class Trip {
     public void setUser(User user) {
         this.user = user;
     }
-
 }

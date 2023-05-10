@@ -1,4 +1,6 @@
 package com.tripblog.portal.presentation.dto;
+import com.tripblog.portal.persistence.entities.Photo;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -74,4 +76,5 @@ public class TripDTO {
     public void setIdUser(long idUser) {
         this.idUser = idUser;
     }
+
 }

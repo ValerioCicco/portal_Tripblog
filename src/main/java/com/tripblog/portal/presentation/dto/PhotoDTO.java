@@ -4,7 +4,7 @@ public class PhotoDTO {
 
     private long id;
 
-    private String url;
+    private byte[] photo;
 
     private long idTrip;
 
@@ -16,12 +16,12 @@ public class PhotoDTO {
         this.id = id;
     }
 
-    public String getUrl() {
-        return url;
+    public byte[] getPhoto() {
+        return photo;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setPhoto(byte[] photo) {
+        this.photo = photo;
     }
 
     public long getIdTrip() {
