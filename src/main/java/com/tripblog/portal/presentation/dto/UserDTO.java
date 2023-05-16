@@ -14,7 +14,7 @@ public class UserDTO {
 
     private byte[] userPhoto;
 
-    private String role;
+    private String role = "admin";
 
     public long getId() {
         return id;

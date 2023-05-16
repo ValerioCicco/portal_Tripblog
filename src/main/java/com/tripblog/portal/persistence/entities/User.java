@@ -1,6 +1,7 @@
 package com.tripblog.portal.persistence.entities;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.ColumnDefault;
 
 @Entity
 @Table(name = "users")
@@ -27,7 +28,7 @@ public class User {
     private byte[] userPhoto;
 
     @Column(name = "role", nullable = false)
-    private String role;
+    private String role = "admin";
 
     public long getId() {
         return id;
